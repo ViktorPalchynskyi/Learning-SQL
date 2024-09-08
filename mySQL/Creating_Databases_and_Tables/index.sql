@@ -29,3 +29,9 @@ CREATE TABLE dogs (
     breed VARCHAR(50),
     age INT
 );
+
+SHOW tables;
+
+SHOW COLUMNS FROM cats;
+
+DESC cats;
