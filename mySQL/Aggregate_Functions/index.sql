@@ -47,8 +47,8 @@ SELECT
 	MIN(released_year)  AS earliest_release,
       MAX(pages) AS longest_page_count
 FROM books GROUP BY author_lname;
- 
- 
+
+
 SELECT 
 	author_lname, 
         author_fname,
@@ -56,3 +56,9 @@ SELECT
 	MAX(released_year) AS latest_release,
 	MIN(released_year)  AS earliest_release
 FROM books GROUP BY author_lname, author_fname;
+
+SELECT SUM(pages) FROM books;
+
+SELECT author_lname, COUNT(*), SUM(pages)
+FROM books
+GROUP BY author_lname;
