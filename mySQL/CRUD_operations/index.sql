@@ -15,3 +15,7 @@ SELECT name, breed FROM cats;
 SELECT * FROM cats WHERE age = 4;
 
 SELECT * FROM cats WHERE name ='Egg';
+
+-- Use 'AS' to alias a column in your results (it doesn't actually change the name of the column in the table)
+
+SELECT cat_id AS id, name FROM cats;
