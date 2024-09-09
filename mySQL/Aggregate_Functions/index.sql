@@ -62,3 +62,13 @@ SELECT SUM(pages) FROM books;
 SELECT author_lname, COUNT(*), SUM(pages)
 FROM books
 GROUP BY author_lname;
+
+SELECT AVG(pages) FROM books;
+ 
+SELECT AVG(released_year) FROM books;
+ 
+SELECT 
+    released_year, 
+    AVG(stock_quantity), 
+    COUNT(*) FROM books
+GROUP BY released_year;
