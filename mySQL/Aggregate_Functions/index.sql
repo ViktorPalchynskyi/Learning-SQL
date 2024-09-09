@@ -14,3 +14,7 @@ FROM
     books
 GROUP BY author_lname
 ORDER BY books_written DESC;
+
+SELECT MAX(pages) FROM books;
+ 
+SELECT MIN(author_lname) FROM books;
