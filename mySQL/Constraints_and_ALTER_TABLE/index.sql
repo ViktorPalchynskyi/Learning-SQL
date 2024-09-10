@@ -49,3 +49,12 @@ ALTER TABLE companies
 ADD COLUMN employee_count INT NOT NULL DEFAULT 1;
 
 ALTER TABLE companies DROP COLUMN phone;
+
+RENAME TABLE companies to suppliers;
+
+
+ALTER TABLE suppliers RENAME TO companies;
+
+
+ALTER TABLE companies
+RENAME COLUMN name TO company_name;
