@@ -92,3 +92,11 @@ SELECT
     DENSE_RANK() OVER(ORDER BY salary DESC) as overall_dense_rank,
     ROW_NUMBER() OVER(ORDER BY salary DESC) as overall_num
 FROM employees ORDER BY overall_rank;
+
+SELECT 
+    emp_no, 
+    department, 
+    salary,
+    NTILE(4) OVER(PARTITION BY department ORDER BY salary DESC) AS dept_salary_quartile,
+	NTILE(4) OVER(ORDER BY salary DESC) AS salary_quartile
+FROM employees;
